@@ -1,0 +1,43 @@
+To run the project file, change the file locations containing the dataset in the Blop_detection.ipynb file according to your own, otherwise you will not be able to run the project.
+File locations to be changed:
+
+wt_path = '/home/mucahit/Desktop/lab5/yolov2-tiny-voc.weights'
+# wt_path folder is tiny yolo's special folder. There is a document shared with the name yolov2-tiny-voc.weights
+##the following file locations are the locations where the dataset is located. change them according to their location on your computer.
+train_image_folder = '/home/mucahit/Desktop/lab5/ORNEK_CALISMA/DATASET/images/'
+# train_image_folder --> Location where you will use pictures for training
+train_annot_folder = '/home/mucahit/Desktop/lab5/ORNEK_CALISMA/DATASET/annotations/train_ann/'
+#train_annot_folder --> The location where you will use annotation (files with xml extension) for training
+valid_image_folder = '/home/mucahit/Desktop/lab5/ORNEK_CALISMA/DATASET/images/'
+#valid_image_folder The location of the pictures you will use for testing
+valid_annot_folder = '/home/mucahit/Desktop/lab5/ORNEK_CALISMA/DATASET/annotations/val_ann/'
+# valid_annot_folder The location where you will use annotation (files with xml extension) for testing
+
+Replace the file locations with the locations on your computer.
+
+
+Do the steps in the downstairs:
+
+1-Open the Blop detection.ipynb file in the sample work file. check the codes.Adjust the variables for yourself.
+
+2-You have to divide the data set into train data (training data) and validation data (test data). (Check the DATASET folder in the sample work file)
+(about 70% train-30% validation rate)
+
+
+After completing these steps;
+
+3-If you want take image from Zed Camera
+
+Zed has a double image in a picture file taken from the camera. Therefore, the images in the dataset collected with the Zed camera should be split in half. The description of how to format the image is specified in the image_split.ipynb file.
+
+After the picture is divided into two, the labeling process must be done with the labelimg program. In the picture, the name of the object you are recognizing (label), and
+tag the coordinates in the image. After each labeling operation, the action should be recorded.
+The recorded data are .xml extension files and this file is used to create the annotation file.
+
+How is the image tagged? A related video:
+
+https://www.youtube.com/watch?v=p0nR2YsCY_U
+
+Every image must be saved after the cropping is finished. Each resume must be an xml file. The program creates the annotation file because it saves it in xml format.
+
+
